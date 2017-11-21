@@ -7,11 +7,15 @@ $(document).ready(function() {
         },
         dataType: "json",
         success: function(data) {
-            $("#ad_block_1").append('<p>' + data.text + '</p>');
+            //$("#ad_block_1").append('<p>' + data.text + '</p>');
         },
         error: function() {
-            $("#ad_block_1").append("<p>ERROR</p>");
+            //$("#ad_block_1").append("<p>ERROR</p>");
             alert("Error : No response.");
+
+            $("#ad_block_1").append('<p>' + data.text + '</p>');
+            $("#ad_block_1").append('<p>' + data.text + '</p>');
+            $("#ad_block_1").append('<p>' + data.text + '</p>');
         }
     })
 });
