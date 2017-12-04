@@ -58,7 +58,7 @@ contract adseller {
     function bid(string ad_content, address ad_id) payable returns(bool success){
         require(registered[ad_id]==true);
         if(bidDueTime[ad_id] < now){
-            gotoNext(ad_id)
+            gotoNext(ad_id);
         }
         if(msg.value*105<=100*highestBid[ad_id]){
             revert();
